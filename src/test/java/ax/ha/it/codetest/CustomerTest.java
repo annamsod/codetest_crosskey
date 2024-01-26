@@ -43,4 +43,11 @@ class CustomerTest {
                 " € each month.";
         assertEquals(expected,customer.toString());
     }
+
+    @Test
+    void setNameTest() {
+        Customer customer = new Customer("test",1000,2,5);
+        customer.setName("New name");
+        assertEquals("New name", customer.getName());
+    }
 }
