@@ -21,16 +21,6 @@ public class Customer {
         return name;
     }
 
-    @Override
-    public String toString() {
-        DecimalFormat format = new DecimalFormat("#.00");
-        return  name +
-                " wants to borrow " + (double)(loan/100) +
-                " € for a period of " + years +
-                " years and pay " + format.format(payment) +
-                " € each month." ;
-    }
-
     public double getLoan() {
         return (double) loan /100;
     }
@@ -49,6 +39,16 @@ public class Customer {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        DecimalFormat format = new DecimalFormat("#.00");
+        return  name +
+                " wants to borrow " + (double)(loan/100) +
+                " € for a period of " + years +
+                " years and pay " + format.format(payment) +
+                " € each month." ;
     }
 
     public double calcPayment(){
