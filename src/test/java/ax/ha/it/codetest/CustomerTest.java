@@ -37,7 +37,7 @@ class CustomerTest {
         DecimalFormat format = new DecimalFormat("#.00");
         Customer customer = new Customer("test",1000,2,5);
         String expected = customer.getName() +
-                " wants to borrow " + customer.getLoan() +
+                " wants to borrow " + format.format(customer.getLoan()) +
                 " € for a period of " + customer.getYears() +
                 " years and pay " + format.format(customer.getPayment()) +
                 " € each month.";
