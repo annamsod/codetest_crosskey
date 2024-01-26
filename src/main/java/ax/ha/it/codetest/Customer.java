@@ -1,15 +1,15 @@
 package ax.ha.it.codetest;
 
-public class Costumer {
+public class Customer {
     private String name;
     private final int loan;
     private final double interest;
     private final int years;
     private final double payment;
 
-    public Costumer(String name, double loan, double interest, int years) {
+    public Customer(String name, double loan, double interest, int years) {
         this.name = name;
-        this.loan = (int)loan*100;
+        this.loan = (int) (loan*100);
         this.interest = interest/100;
         this.years = years;
         this.payment=this.calcPayment();
@@ -42,6 +42,6 @@ public class Costumer {
     public double calcPayment(){
         double result=0;
         result=loan*(interest*Utils.power(1+interest,years*12))/(Utils.power(1+interest,years*12)-1);
-        return result;
+        return result/100;
     }
 }
