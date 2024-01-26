@@ -1,5 +1,7 @@
 package ax.ha.it.codetest;
 
+import java.text.DecimalFormat;
+
 public class Customer {
     private String name;
     private final int loan;
@@ -17,6 +19,16 @@ public class Customer {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        DecimalFormat format = new DecimalFormat("#.00");
+        return  name +
+                " wants to borrow " + (double)(loan/100) +
+                " € for a period of " + years +
+                " years and pay " + format.format(payment) +
+                " € each month." ;
     }
 
     public double getLoan() {
