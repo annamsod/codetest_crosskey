@@ -40,7 +40,8 @@ public class Costumer {
     }
 
     public double calcPayment(){
-        //implementaion here
-        return 0;
+        double result=0;
+        result=loan*(interest*Utils.power(1+interest,years*12))/(Utils.power(1+interest,years*12)-1);
+        return result;
     }
 }
