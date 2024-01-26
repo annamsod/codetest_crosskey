@@ -1,0 +1,46 @@
+package ax.ha.it.codetest;
+
+public class Costumer {
+    private String name;
+    private final int loan;
+    private final double interest;
+    private final int years;
+    private final double payment;
+
+    public Costumer(String name, double loan, double interest, int years) {
+        this.name = name;
+        this.loan = (int)loan*100;
+        this.interest = interest/100;
+        this.years = years;
+        this.payment=this.calcPayment();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getLoan() {
+        return (double) loan /100;
+    }
+
+    public double getInterest() {
+        return interest*100;
+    }
+
+    public int getYears() {
+        return years;
+    }
+
+    public double getPayment() {
+        return payment;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double calcPayment(){
+        //implementaion here
+        return 0;
+    }
+}
