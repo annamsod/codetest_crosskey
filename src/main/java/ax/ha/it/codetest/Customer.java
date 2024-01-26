@@ -40,8 +40,9 @@ public class Customer {
     }
 
     public double calcPayment(){
-        double result=0;
-        result=loan*(interest*Utils.power(1+interest,years*12))/(Utils.power(1+interest,years*12)-1);
+        double result;
+        double r = interest/12; //monthly interest
+        result=loan*(r*Utils.power(1+r,years*12))/(Utils.power(1+r,years*12)-1);
         return result/100;
     }
 }
