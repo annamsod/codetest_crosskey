@@ -13,4 +13,22 @@ public class Bank {
         return prospects.get(index);
     }
 
+    public StringBuilder getAllProspects(){
+        StringBuilder allPros = new StringBuilder();
+        if (prospects.isEmpty()){
+            allPros.append("There are no prospects!");
+        }
+        else{
+            int i = 1;
+            for(Customer customer: prospects){
+                allPros.append("****************************************************************************************************\n" +
+                        "Prospect ").append(i).append(": ").append(customer.printCustomer())
+                        .append("\n")
+                        .append("****************************************************************************************************\n\n");
+                i++;
+            }
+        }
+        return allPros;
+    }
+
 }
