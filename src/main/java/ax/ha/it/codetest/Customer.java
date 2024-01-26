@@ -44,7 +44,7 @@ public class Customer {
     public String printCustomer() {
         DecimalFormat format = new DecimalFormat("#.00");
         return  name +
-                " wants to borrow " + format.format(loan/100) +
+                " wants to borrow " + format.format((double)loan/100) +
                 " € for a period of " + years +
                 " years and pay " + format.format(payment) +
                 " € each month." ;
