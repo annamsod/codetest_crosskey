@@ -3,8 +3,11 @@ package ax.ha.it.codetest;
 import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import java.text.DecimalFormat;
 
 
 class CustomerTest {
@@ -27,5 +30,17 @@ class CustomerTest {
     void calcPaymentTest(String name, double loan, double interest, int years, double expResult) {
         Customer customer = new Customer(name,loan,interest,years);
         assertEquals(expResult, customer.calcPayment(),1e-7);
+    }
+
+    @Test
+    void toStringTest() {
+        DecimalFormat format = new DecimalFormat("#.00");
+        Customer customer = new Customer("test",1000,2,5);
+        String expected = customer.getName() +
+                " wants to borrow " + customer.getLoan() +
+                " € for a period of " + customer.getYears() +
+                " years and pay " + format.format(customer.getPayment()) +
+                " € each month.";
+        assertEquals(expected,customer.toString());
     }
 }
