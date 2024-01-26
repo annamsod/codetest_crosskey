@@ -14,7 +14,7 @@ class UtilsTest {
             "5,2,25", //base arbitrary integer, 5^2=25
             "0.5,2,0.25" //base arbitrary double, 0.5^2=0.25
     })
-    void testPower (double base, int exponent, double expectedResult) {
+    void powerTest (double base, int exponent, double expectedResult) {
         double result = Utils.power(base,exponent);
         assertEquals(expectedResult,result);
     }
