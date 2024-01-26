@@ -33,7 +33,7 @@ class CustomerTest {
     }
 
     @Test
-    void toStringTest() {
+    void printCustomerTest() {
         DecimalFormat format = new DecimalFormat("#.00");
         Customer customer = new Customer("test",1000,2,5);
         String expected = customer.getName() +
@@ -41,7 +41,7 @@ class CustomerTest {
                 " € for a period of " + customer.getYears() +
                 " years and pay " + format.format(customer.getPayment()) +
                 " € each month.";
-        assertEquals(expected,customer.toString());
+        assertEquals(expected,customer.printCustomer());
     }
 
     @Test

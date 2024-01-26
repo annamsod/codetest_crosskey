@@ -41,8 +41,7 @@ public class Customer {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
+    public String printCustomer() {
         DecimalFormat format = new DecimalFormat("#.00");
         return  name +
                 " wants to borrow " + format.format(loan/100) +
