@@ -1,6 +1,5 @@
 package ax.ha.it.codetest;
 
-import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -52,10 +51,9 @@ public class Main {
             e.printStackTrace();
         }
 
-        // Show all the prospects in a message dialog
-        //JOptionPane.showMessageDialog(null,bank.getAllProspects());
 
-        // Or show all the prospects in the terminal
+
+        // Show all the prospects in the terminal
         System.out.println(bank.getAllProspects());
     }
 }
