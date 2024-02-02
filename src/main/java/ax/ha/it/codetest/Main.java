@@ -53,9 +53,9 @@ public class Main {
         }
 
         // Show all the prospects in a message dialog
-        JOptionPane.showMessageDialog(null,bank.getAllProspects());
+        //JOptionPane.showMessageDialog(null,bank.getAllProspects());
 
         // Or show all the prospects in the terminal
-        //System.out.println(bank.getAllProspects());
+        System.out.println(bank.getAllProspects());
     }
 }
